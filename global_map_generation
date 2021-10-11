@@ -1,0 +1,22 @@
+export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:~/Firmware
+
+echo "export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:~/catkin_ws/src/avoidance/avoidance/sim/models:~/catkin_ws/src/avoidance/avoidance/sim/worlds" >> ~/.bashrc
+
+
+export QT_X11_NO_MITSHM=1
+
+_________________________________________________________________________________________________
+roscore
+_________________________________________________________________________________________________
+roslaunch mavros px4.launch fcu_url:="udp://:14540@192.168.1.36:14557"
+_________________________________________________________________________________________________
+roslaunch local_planner local_planner_stereo.launch
+_________________________________________________________________________________________________
+rosrun image_view stereo_view stereo:=/stereo image:=image_rect_color
+_________________________________________________________________________________________________
+
+_________________________________________________________________________________________________
+nomad@nomad:~/Desktop/Q_Ground$ |||  
+_________________________________________________________________________________________________
+
+/opt/ros/melodic/share/octomap_server/launch$ ||| roslaunch octomap_server UAV_global.launch

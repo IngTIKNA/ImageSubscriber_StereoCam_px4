@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/nomad/Desktop/image_receiver/install/setup.sh

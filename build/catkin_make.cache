@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/nomad/Desktop/image_receiver/devel -DCMAKE_INSTALL_PREFIX=/home/nomad/Desktop/image_receiver/install -G Unix Makefiles

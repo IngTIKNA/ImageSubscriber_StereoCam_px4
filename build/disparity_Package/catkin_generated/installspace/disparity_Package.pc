@@ -1,0 +1,8 @@
+prefix=/home/nomad/Desktop/image_receiver/install
+
+Name: disparity_Package
+Description: Description of disparity_Package
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs stereo_msgs
